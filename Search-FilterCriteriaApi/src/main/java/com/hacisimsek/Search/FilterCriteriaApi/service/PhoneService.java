@@ -20,4 +20,8 @@ public class PhoneService {
     public List<Phone> searchPhones(String search) {
         return phoneRepository.findAll(PhoneSpecification.searchPhone(search));
     }
+
+    public Phone addPhone(Phone phone) {
+        return phoneRepository.save(phone);
+    }
  }
